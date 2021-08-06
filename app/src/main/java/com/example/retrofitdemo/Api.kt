@@ -8,10 +8,14 @@ import retrofit2.http.Path
 
 interface Api {
 
-    @GET("http://www.weather.com.cn/data/sk/{cityCode}.html")
-    fun getWeather(@Path("cityCode") code: String): Observable<WeatherInfo>
+//    @GET("http://www.weather.com.cn/data/sk/{cityCode}.html")
+//    fun getWeather(@Path("cityCode") code: String): Observable<WeatherInfo>
 
    /* @GET("https://api.weibo.com/oauth2/authorize?client_id=3595354204&redirect_uri=https://api.weibo.com/oauth2/{cityCode}.html")
     fun getWeather(@Path("cityCode") code: String): Observable<String>*/
+
+    @GET("/data/{sk}/{cityCode}.html")
+    fun getWeather(@Path("cityCode")code:String,@Path("sk")sk:String):Observable<WeatherInfo>
+
 
 }

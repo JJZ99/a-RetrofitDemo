@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit
 
 object RetrofitHelper {
 
-    private const val BASE_URL = "https://www.baidu.com"
+    private const val BASE_URL = "http://www.weather.com.cn"
 
     private var retrofit: Retrofit? = null
 

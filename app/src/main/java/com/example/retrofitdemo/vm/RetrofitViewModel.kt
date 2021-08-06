@@ -28,7 +28,7 @@ class RetrofitViewModel : ViewModel(){
 
     //http://reactivex.io/documentation/observable.html
     fun getWeather(){
-        RetrofitHelper.getRetrofit().create(Api::class.java).getWeather("101010100")
+        RetrofitHelper.getRetrofit().create(Api::class.java).getWeather("101010100","sk")
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe(object : Observer<WeatherInfo> {
